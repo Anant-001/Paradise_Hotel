@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+.clip-polygon {
+    clip-path: polygon(0 100%, 10% 0, 50% 20%, 90% 0, 100% 100%);
+}
+
+/* Scrolling animation for Amenities and Rooms */
+.scroll-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.scroll-loop {
+    display: flex;
+    gap: 1.5rem;
+    animation: scrollLoop 20s linear infinite;
+    width: max-content;
+}
+
+.scroll-card {
+    background-color: #d1fae5; /* Tailwind's green-100 */
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scrollLoop {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
